@@ -10,6 +10,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '991173073639276');
+    fbq('track', 'PageView');
+    
+    // Function to track AddToCart Event
+    function trackAddToCart() {
+        if (typeof fbq === 'function') {
+            fbq('track', 'AddToCart');
+        }
+    }
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=991173073639276&ev=PageView&noscript=1"/>
+    </noscript>
     <style>
         body { font-family: 'Inter', sans-serif; }
         .pulse-green { animation: pulse 2s infinite; }
@@ -43,8 +65,8 @@
             
             <div class="flex justify-center pt-4 pb-2">
                 <div class="w-full max-w-xl mx-auto mt-8 overflow-hidden rounded-xl border border-slate-200 shadow-sm">
-    <img src="gambar1.png" alt="Validasi Optimasi Data Web24jam" class="w-full h-auto object-contain block hover:scale-105 transition-transform duration-500">
-</div>
+                    <img src="gambar1.png" alt="Validasi Optimasi Data Web24jam" class="w-full h-auto object-contain block hover:scale-105 transition-transform duration-500">
+                </div>
             </div>
             
             <p class="text-sm font-semibold text-slate-800 flex items-center justify-center gap-1.5 pt-2">
@@ -68,8 +90,8 @@
             </h2>
 
             <div class="w-full max-w-5xl mx-auto mb-12 overflow-hidden rounded-2xl border-2 border-slate-700 shadow-2xl relative">
-    <img src="gambar2.jpeg" alt="Pemilik Bisnis Stress Karena Ribet Bikin Website Sendiri" class="w-full h-auto object-contain block hover:scale-105 transition-transform duration-500">
-</div>
+                <img src="gambar2.jpeg" alt="Pemilik Bisnis Stress Karena Ribet Bikin Website Sendiri" class="w-full h-auto object-contain block hover:scale-105 transition-transform duration-500">
+            </div>
             
             <p class="text-slate-400 text-sm md:text-base mb-10 text-center font-normal">
                 Mau mulai jualan online atau tes produk baru, tapi selalu terbentur masalah klasik ini:
@@ -202,8 +224,8 @@
             </div>
 
             <div class="pt-2">
-                <a href="https://wa.me/6288229380912?text=Halo%20Web24jam%2C%20saya%20ingin%20amankan%20slot%20website%2024%20jam%20jadi%20sekarang" target="_blank" class="pulse-green inline-flex items-center justify-center w-full bg-emerald-600 hover:bg-emerald-500 text-white text-base md:text-lg font-black py-4 px-6 rounded-xl shadow-xl transition-all transform active:scale-95 gap-2">
-                    🟢 Amankan Slot Website 24 Jam Saya Sekarang Via WhatsApp
+                <a href="https://wa.me/6288229380912?text=Halo%20Web24jam%2C%20saya%20ingin%20amankan%20slot%20website%2024%20jam%20jadi%20sekarang" onclick="trackAddToCart()" target="_blank" class="pulse-green inline-flex items-center justify-center w-full bg-emerald-600 hover:bg-emerald-500 text-white text-base md:text-lg font-black py-4 px-6 rounded-xl shadow-xl transition-all transform active:scale-95">
+                    Amankan Slot Website 24 Jam Saya Sekarang Via WhatsApp
                 </a>
                 <p class="text-[11px] text-slate-500 mt-3 font-medium italic">
                     *Klik tombol di atas untuk langsung terhubung dengan tim eksekutor kami. Garansi 24 jam dimulai tepat setelah data Anda kami terima.*
@@ -218,8 +240,8 @@
     </footer>
 
     <div class="fixed bottom-0 inset-x-0 bg-white border-t border-slate-200 p-4 z-50 md:hidden shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
-        <a href="https://wa.me/6288229380912?text=Halo%20Web24jam%2C%20saya%20mau%20konsultasi%20gratis%20mengenai%20pembuatan%20website" target="_blank" class="flex items-center justify-center w-full bg-emerald-600 hover:bg-emerald-500 text-white text-base font-black py-3.5 px-4 rounded-xl shadow-md gap-2">
-            Konsultasi Gratis <span>🟢</span>
+        <a href="https://wa.me/6288229380912?text=Halo%20Web24jam%2C%20saya%20mau%20konsultasi%20gratis%20mengenai%20pembuatan%20website" onclick="trackAddToCart()" target="_blank" class="flex items-center justify-center w-full bg-emerald-600 hover:bg-emerald-500 text-white text-base font-black py-3.5 px-4 rounded-xl shadow-md">
+            Konsultasi Gratis
         </a>
     </div>
 
