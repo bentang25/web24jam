@@ -2,7 +2,13 @@
 <html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 1. PENGUNCI VIEWPORT & PROTEKSI MOBILE SKALA -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- 2. PROTEKSI BANTAHAN FORCE DARK MODE (Memaksa Browser HP Tetap Menggunakan Tema Terang Pilihan Kita) -->
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#FFFFFF">
+    
     <title>Web24jam - Jasa Pembuatan Website Profesional 24 Jam Jadi</title>
     
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -32,8 +38,51 @@
     <noscript>
         <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=991173073639276&ev=PageView&noscript=1"/>
     </noscript>
+    
+    <!-- 3. TAMENG VANILLA CSS: Jaminan Perlindungan 100% Jika CDN Tailwind Gagal Dimuat Browser HP Lawas -->
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        /* Paksa reset dasar agar tidak crash di browser entry-level */
+        body { 
+            font-family: 'Inter', sans-serif !important; 
+            background-color: #F8FAFC !important; /* bg-slate-50 */
+            color: #0F172A !important; /* text-slate-900 */
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        
+        /* Pembungkus Sakti: Memaksa Layout Berada di Tengah & Berjarak Aman Dari Ujung Layar HP */
+        .container-proteksi-mobile {
+            width: 100% !important;
+            max-width: 570px !important; /* Mengunci fokus membaca audiens mobile */
+            margin-left: auto !important;
+            margin-right: auto !important;
+            padding-left: 20px !important;  /* Jaminan mutlak teks tidak menempel casing */
+            padding-right: 20px !important; /* Jaminan mutlak teks tidak menempel casing */
+            box-sizing: border-box !important;
+        }
+
+        /* Jaminan Pengunci Tombol Utama Agar Kebal Selamanya */
+        .tombol-whatsapp-badak {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 100% !important;
+            background-color: #059669 !important; /* bg-emerald-600 */
+            color: #FFFFFF !important;
+            text-decoration: none !important;
+            text-align: center !important;
+            font-weight: 900 !important;
+            border-radius: 12px !important;
+            padding: 16px 20px !important;
+            box-sizing: border-box !important;
+            font-size: 16px !important;
+            box-shadow: 0 10px 25px rgba(5, 150, 105, 0.3) !important;
+        }
+
+        .tombol-whatsapp-badak:hover, .tombol-whatsapp-badak:active {
+            background-color: #047857 !important; /* bg-emerald-700 */
+        }
+        
         .pulse-green { animation: pulse 2s infinite; }
         @keyframes pulse {
             0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7); }
@@ -44,8 +93,9 @@
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased selection:bg-blue-600 selection:text-white">
 
+    <!-- HEADER / HERO -->
     <header class="relative bg-white border-b border-slate-200 pt-12 pb-16 md:py-20">
-        <div class="max-w-3xl mx-auto px-4 text-center space-y-6">
+        <div class="container-proteksi-mobile text-center space-y-6">
             
             <h1 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight tracking-tight">
                 Jangan Mau Ditipu Agensi Mahal! Ngapain Bayar Jutaan Rupiah buat Website?
@@ -82,8 +132,9 @@
         </div>
     </header>
 
+    <!-- SECTION MASALAH -->
     <section class="py-16 bg-slate-900 text-white border-b border-slate-800">
-        <div class="max-w-3xl mx-auto px-4">
+        <div class="container-proteksi-mobile">
             
             <h2 class="text-2xl md:text-4xl font-black text-center text-red-500 mb-4 leading-tight">
                 Kenapa Banyak Pemilik Bisnis Frustrasi Saat Mau Bikin Website?
@@ -138,8 +189,9 @@
         </div>
     </section>
 
+    <!-- SECTION SOLUSI -->
     <section class="py-16 bg-white border-b border-slate-200">
-        <div class="max-w-4xl mx-auto px-4">
+        <div class="container-proteksi-mobile">
             
             <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
                 <span class="text-blue-600 font-bold text-xs uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded-md">The Solution</span>
@@ -190,15 +242,16 @@
         </div>
     </section>
 
+    <!-- SECTION CTA / PENUTUP -->
     <section id="checkout-section" class="py-16 bg-slate-50">
-        <div class="max-w-xl mx-auto px-4 text-center space-y-8">
+        <div class="container-proteksi-mobile text-center space-y-8">
             
             <div class="space-y-3">
                 <h2 class="text-2xl md:text-3xl font-black text-slate-900 leading-tight">
                     Berapa Nilai Kehilangan Omzet Anda Jika Menunda Slot Ini Sampai Besok?
                 </h2>
                 <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-                    Setiap hari Anda menunda, ratusan calon pembeli potensial di internet diambil oleh kompetitor Anda yang sudah memiliki website profesional.
+                    Every day you delay, hundreds of potential buyers on the internet are taken by your competitors who already have a professional website.
                 </p>
                 <p class="text-slate-700 text-sm md:text-base font-semibold leading-relaxed">
                     Dengan <strong>Rp 299.000</strong>, Anda mendapatkan website instan, domain gratis, copywriting maut, dan infrastruktur siap iklan dalam 24 jam. Ini bukan sekadar pengeluaran, ini adalah investasi tercepat untuk melipatgandakan penjualan bisnis Anda.
@@ -223,11 +276,12 @@
                 </p>
             </div>
 
+            <!-- TOMBOL CTA UTAMA YANG SUDAH DIINJEKSI TAMENG ANTI-HANCUR -->
             <div class="pt-2">
                 <a href="https://api.whatsapp.com/send?phone=6285165851958&text=Halo%20Web24jam%2C%20saya%20ingin%20amankan%20slot%20website%2024%20jam%20jadi%20sekarang" 
-   onclick="trackAddToCart()" 
-   target="_blank" 
-   class="pulse-green inline-flex items-center justify-center w-full bg-emerald-600 hover:bg-emerald-500 text-white text-base md:text-lg font-black py-4 px-6 rounded-xl shadow-xl transition-all transform active:scale-95">
+                   onclick="trackAddToCart()" 
+                   target="_blank" 
+                   class="tombol-whatsapp-badak pulse-green">
                     Amankan Slot Website 24 Jam Saya Sekarang Via WhatsApp
                 </a>
                 <p class="text-[11px] text-slate-500 mt-3 font-medium italic">
@@ -238,6 +292,7 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="py-8 bg-slate-950 text-slate-600 text-center text-xs border-t border-slate-900">
         <p>&copy; 2026 Web24jam. Seluruh Hak Cipta Dilindungi.</p>
     </footer>
